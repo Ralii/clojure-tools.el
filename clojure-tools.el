@@ -11,6 +11,11 @@
 ;;; Code:
 (require 'cider)
 
+(defcustom render-function-ns ""
+  "Render function namespace"
+  :group 'clojure-tools
+  :type 'string)
+
 (defun clojure-tools-malli-data->schema ()
   "requires malli to be installed"
   (interactive)
@@ -34,7 +39,7 @@
 (defun clojure-tools-force-render! ()
   "Forces render on only evaluated components. Much faster than hot-reload"
   (interactive)
-  (cider-interactive-eval "(iprally-ui.routes/render-app)"
+  (cider-interactive-eval render-function-ns
                           nil
                           nil
                           (cider--nrepl-pr-request-map)))
