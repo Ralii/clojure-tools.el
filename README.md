@@ -12,7 +12,7 @@ Toolset for Clojure development
 
 # Functions
 
-## Re-frame and ragent specific
+## Re-frame and reagent
 
 ### clojure-tools-force-render!
 
@@ -22,7 +22,7 @@ Toolset for Clojure development
 
 ### clojure-tools-subscribe-under-point
 
-## Snitch-specific
+## Snitch
 
 ### clojure-tools-snitch-clj
 
@@ -30,7 +30,7 @@ Toolset for Clojure development
 
 ### clojure-tools-cycle-defn*
 
-## Malli-specific
+## Malli
 
 ### clojure-tools-malli-data->schema
 
