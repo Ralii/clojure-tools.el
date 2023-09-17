@@ -88,6 +88,7 @@
                               (cider-sexp-at-point))
                       (cider-current-ns)))
 
+;;;###autoload
 (define-minor-mode clojure-tools-mode
   "Clojure-tools minor mode for debugging and development"
   :lighter " clojure-tools"
@@ -96,5 +97,10 @@
             map))
 
 (add-hook 'clojure-mode-hook 'clojure-tools-mode)
+
+(add-hook 'clojure-mode-hook 'clojure-tools-mode)
+(add-hook 'clojurescript-mode-hook 'clojure-tools-mode)
+(add-hook 'clojurec-mode-hook 'clojure-tools-mode)
+
 
 (provide 'clojure-tools)
