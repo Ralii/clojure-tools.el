@@ -88,5 +88,13 @@
                               (cider-sexp-at-point))
                       (cider-current-ns)))
 
+(define-minor-mode clojure-tools-mode
+  "Clojure-tools minor mode for debugging and development"
+  :lighter " clojure-tools"
+  :keymap (let ((map (make-sparse-keymap)))
+            (define-key map (kbd "C-c f") 'insert-foo)
+            map))
+
+(add-hook 'clojure-mode-hook 'clojure-tools-mode)
+
 (provide 'clojure-tools)
-;;; clojure-tools.el ends here
