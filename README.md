@@ -60,6 +60,7 @@ Will cycle `defn` and `defn*` to make it easier to toggle function to be used wi
 ## Malli
 
 ### clojure-tools-malli-data->schema
+Turn data into malli schema.
 
 ### clojure-tools-malli-schema->data
-
+Turn malli-schema into data.
