@@ -24,7 +24,7 @@ Toolset for Clojure development
 
 ## clojure-tools-snitch-clj
 
-## lr-snitch-cljs
+## clojure-tools-snitch-cljs
 
 ## clojure-tools-cycle-defn*
 
