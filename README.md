@@ -12,9 +12,7 @@ Toolset for Clojure development
 
 # Functions
 
-### clojure-tools-malli-data->schema
-
-### clojure-tools-malli-schema->data
+## Re-frame and ragent specific
 
 ### clojure-tools-force-render!
 
@@ -22,10 +20,19 @@ Toolset for Clojure development
 
 ### clojure-tools-inspect-app-db
 
+### clojure-tools-subscribe-under-point
+
+## Snitch-specific
+
 ### clojure-tools-snitch-clj
 
 ### clojure-tools-snitch-cljs
 
 ### clojure-tools-cycle-defn*
 
-### clojure-tools-subscribe-under-point
+## Malli-specific
+
+### clojure-tools-malli-data->schema
+
+### clojure-tools-malli-schema->data
+
