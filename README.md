@@ -10,6 +10,14 @@ Toolset for Clojure development
 
 # Installation instructions
 
+## Doom emacs
+Go to `packages.el` and insert:
+
+```
+(package! clojure-tools :recipe
+  (:host github :repo "Ralii/clojure-tools.el" :branch "master"))
+```
+
 # Functions
 
 ## Re-frame and reagent
