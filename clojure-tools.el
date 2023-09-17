@@ -96,6 +96,10 @@
             (define-key map (kbd "C-c f") 'insert-foo)
             map))
 
+;;;;###autoload
+(clojure-tools-mode 1)
+
+
 (add-hook 'clojure-mode-hook 'clojure-tools-mode)
 
 (add-hook 'clojure-mode-hook 'clojure-tools-mode)
