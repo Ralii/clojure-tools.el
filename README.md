@@ -65,3 +65,6 @@ Turn data into malli schema.
 
 ### clojure-tools-malli-schema->data
 Turn malli-schema into data.
+
+# Workflows
+I will document some of the workflows I use around these tools in here with short videos or gifs.
