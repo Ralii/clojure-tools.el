@@ -55,8 +55,8 @@
   (interactive)
   (cider-inspect-expr "@re-frame.db/app-db" (cider-current-ns)))
 
-(defun clojure-tools-lr-snitch-clj ()
-  "Init snitch (requires snitch)"
+(defun clojure-tools-snitch-clj ()
+  "Makes snitch available for every ns (requires snitch)"
   (interactive)
   (cider-interactive-eval "(doseq [ns (all-ns)]
                                 (binding [*ns* ns]
@@ -65,7 +65,12 @@
                           nil
                           (cider--nrepl-pr-request-map)))
 
+"Makes snitch available for current cljs ns"
+(fset 'lr-snitch-cljs
+      (kmacro-lambda-form [?m ?1 ?g ?g ?j ?o ?\[ ?s ?n ?i ?t ?c ?h ?. ?c ?o ?r ?e ?  ?: ?r ?e ?f ?e ?r ?- ?m ?a ?c ?r ?o ?s ?  ?\[ ?d ?e ?f ?n ?* ?  ?* ?f ?n ?  ?* ?l ?e ?t ?j ?k ?\' ?1] 0 "%d"))
+
 (defun clojure-tools-cycle-defn* ()
+  "Toggles defn -> defn* and back"
   (interactive)
   (save-excursion
     (ignore-errors (forward-char 7))
@@ -76,7 +81,7 @@
       (insert "*"))))
 
 (defun clojure-tools-subscribe-under-point ()
-  "Will subscribe reg-sub under point and check it inside inspector"
+  "Will subscribe reg-sub under point and show its value inside cider inspector"
   (interactive)
   (cider-inspect-expr (format "(do (require 're-frame.core)
                                @(re-frame.core/subscribe [%s]))"
