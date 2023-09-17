@@ -12,20 +12,20 @@ Toolset for Clojure development
 
 # Functions
 
-## clojure-tools-malli-data->schema
+### clojure-tools-malli-data->schema
 
-## clojure-tools-malli-schema->data
+### clojure-tools-malli-schema->data
 
-## clojure-tools-force-render!
+### clojure-tools-force-render!
 
-## clojure-tools-eval-and-force-render!
+### clojure-tools-eval-and-force-render!
 
-## clojure-tools-inspect-app-db
+### clojure-tools-inspect-app-db
 
-## clojure-tools-snitch-clj
+### clojure-tools-snitch-clj
 
-## clojure-tools-snitch-cljs
+### clojure-tools-snitch-cljs
 
-## clojure-tools-cycle-defn*
+### clojure-tools-cycle-defn*
 
-## clojure-tools-subscribe-under-point
+### clojure-tools-subscribe-under-point
