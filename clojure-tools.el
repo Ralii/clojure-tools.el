@@ -9,7 +9,6 @@
 ;;
 ;;
 ;;; Code:
-(require 'cider)
 
 (defcustom render-function-ns ""
   "Render function namespace"
