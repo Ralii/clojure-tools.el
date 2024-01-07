@@ -41,12 +41,11 @@ Then input-number is defined so you can point cursor to defn and render componen
 ### clojure-tools-inspect-app-db
 Uses cider inspector to view the global re-frame app-db.
 
-![subscribe-under-point](https://github.com/Ralii/clojure-tools.el/assets/7629039/9d0c1cbb-0152-4209-bbf7-ca87aa96f2dd)
-
-
 ### clojure-tools-subscribe-under-point
 Show value of a subscription in cider inspector. Good for doing repl-driven ui development since you don't have to see views or browser to see values of subscriptions.
 Put cursor on subscription name and it will show it's return value on cider inspector.
+
+![subscribe-under-point](https://github.com/Ralii/clojure-tools.el/assets/7629039/9d0c1cbb-0152-4209-bbf7-ca87aa96f2dd)
 
 ## Snitch
 Snitch is a great debugging library for Clojure/Clojurescript. It will inline-def bindings so you can use them in repl.
