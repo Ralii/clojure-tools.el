@@ -41,6 +41,9 @@ Then input-number is defined so you can point cursor to defn and render componen
 ### clojure-tools-inspect-app-db
 Uses cider inspector to view the global re-frame app-db.
 
+![subscribe-under-point](https://github.com/Ralii/clojure-tools.el/assets/7629039/9d0c1cbb-0152-4209-bbf7-ca87aa96f2dd)
+
+
 ### clojure-tools-subscribe-under-point
 Show value of a subscription in cider inspector. Good for doing repl-driven ui development since you don't have to see views or browser to see values of subscriptions.
 Put cursor on subscription name and it will show it's return value on cider inspector.
@@ -55,7 +58,8 @@ Initialize snitch for Clojure. After running this snitch will be available on ev
 Initialize snitch for Clojurescript. After running this snitch will be available on current ns. Difference with `clojure-tools-snitch-clj` is that you have run this on every `ns` you want
 to use snitch and it will insert snitch manually on ns `require`.
 
-### clojure-tools-cycle-defn*
+### clojure-tools-cycle-defn*!
+
 Will cycle `defn` and `defn*` to make it easier to toggle function to be used with snitch.
 
 ## Malli
