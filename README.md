@@ -57,6 +57,9 @@ Initialize snitch for Clojure. After running this snitch will be available on ev
 Initialize snitch for Clojurescript. After running this snitch will be available on current ns. Difference with `clojure-tools-snitch-clj` is that you have run this on every `ns` you want
 to use snitch and it will insert snitch manually on ns `require`.
 
+![snitch](https://github.com/Ralii/clojure-tools.el/assets/7629039/e8d603b1-ef64-4c2f-9fb4-b2ff94e6bfb0)
+
+
 ### clojure-tools-cycle-defn*!
 
 Will cycle `defn` and `defn*` to make it easier to toggle function to be used with snitch.
