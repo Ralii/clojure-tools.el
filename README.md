@@ -45,8 +45,7 @@ Uses cider inspector to view the global re-frame app-db.
 Show value of a subscription in cider inspector. Good for doing repl-driven ui development since you don't have to see views or browser to see values of subscriptions.
 Put cursor on subscription name and it will show it's return value on cider inspector.
 
-![Alt Text](gifs/dgiphy.gif)
-
+![subscribe-under-point](https://github.com/Ralii/clojure-tools.el/assets/7629039/9d0c1cbb-0152-4209-bbf7-ca87aa96f2dd)
 
 ## Snitch
 Snitch is a great debugging library for Clojure/Clojurescript. It will inline-def bindings so you can use them in repl.
@@ -58,7 +57,11 @@ Initialize snitch for Clojure. After running this snitch will be available on ev
 Initialize snitch for Clojurescript. After running this snitch will be available on current ns. Difference with `clojure-tools-snitch-clj` is that you have run this on every `ns` you want
 to use snitch and it will insert snitch manually on ns `require`.
 
-### clojure-tools-cycle-defn*
+![snitch](https://github.com/Ralii/clojure-tools.el/assets/7629039/e8d603b1-ef64-4c2f-9fb4-b2ff94e6bfb0)
+
+
+### clojure-tools-cycle-defn*!
+
 Will cycle `defn` and `defn*` to make it easier to toggle function to be used with snitch.
 
 ## Malli
