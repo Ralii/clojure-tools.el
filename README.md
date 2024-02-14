@@ -7,6 +7,7 @@ Toolset for Clojure development
 - [https://github.com/AbhinavOmprakash/snitch](https://github.com/AbhinavOmprakash/snitch)
 - [https://github.com/day8/re-frame](https://github.com/day8/re-frame)
 - [https://github.com/reagent-project/reagent](https://github.com/reagent-project/reagent)
+- [https://github.com/flow-storm/flow-storm-debugger](https://github.com/flow-storm/flow-storm-debugger)
 
 # Installation instructions
 
