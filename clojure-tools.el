@@ -87,33 +87,27 @@
                               (cider-sexp-at-point))
                       (cider-current-ns)))
 
-
-(defun clojure-tools-function-value ()
-  "Will show previous form arguments and return value in cider inspector"
+(defun clojure-tools-json->edn ()
+  "Convert the selected region, or entire file, from JSON to EDN."
   (interactive)
-  (cider-inspect-expr
-   (format
-    "
-    (do
-    (let [[flow thread] (last (filter (fn [[_flow thread]] (< thread 500)) (index-api/all-threads)))]
-    (index-api/select-thread flow thread))
-
-     (let [ [flow-id thread-id] @flow-storm.runtime.indexes.api/selected-thread
-            frames (index-api/all-frames flow-id thread-id (fn [fns fname _ _]
-                                                             (and (= \"%s\" fname)
-                                                             (= \"%s\" fns))))]
-     (-> frames last (select-keys [:args-vec :ret]))))"
-    (cider-symbol-at-point 'bounds)
-    (cider-ns-from-form (cider-ns-form)))
-    (cider-current-ns)))
+  (let ((b (if mark-active (region-beginning) (point-min)))
+        (e (if mark-active (region-end) (point-max)))
+        (jet (when (executable-find "jet")
+               "jet --pretty --keywordize keyword --from json --to edn")))
+    (if jet
+      (let ((p (point)))
+        (shell-command-on-region b e jet (current-buffer) t)
+        (goto-char p))
+      (user-error "Could not find jet installed"))))
 
 ;;;###autoload
 (define-minor-mode clojure-tools-mode
-  "Clojure-tools minor mode for debugging and development"
+  "Clojure-tools minor mode for debugging and development."
   :lighter " clojure-tools"
   :keymap (let ((map (make-sparse-keymap)))
             (define-key map (kbd "C-c f") 'insert-foo)
             map))
+
 
 ;;;###autoload
 (clojure-tools-mode 1)
