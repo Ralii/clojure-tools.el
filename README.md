@@ -79,5 +79,8 @@ These need Flowstorm debugger to be installed
 ### clojure-tools-function-value
 Shows previous function arguments and return value
 
+![flowstormfun](https://github.com/Ralii/clojure-tools.el/assets/7629039/b30c8673-83a1-419f-b963-495fa77e3d79)
+
+
 # Workflows
 I will document some of the workflows I use around these tools in here with short videos or gifs.
