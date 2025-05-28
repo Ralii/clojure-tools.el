@@ -9,7 +9,6 @@
 ;;
 ;;
 ;;; Code:
-(require 'cider)
 
 (defcustom render-function-ns ""
   "Render function namespace"
@@ -24,7 +23,7 @@
                                   (cider-last-sexp))
                           (cider-eval-print-handler)
                           nil
-                          (cider--nrepl-pr-request-map)))
+                          (cider--nrepl-pr-request-plist)))
 
 (defun clojure-tools-malli-schema->data ()
   "requires malli to be installed"
@@ -34,7 +33,7 @@
                                   (cider-last-sexp))
                           (cider-eval-print-handler)
                           nil
-                          (cider--nrepl-pr-request-map)))
+                          (cider--nrepl-pr-request-plist)))
 
 (defun clojure-tools-force-render! ()
   "Forces render on only evaluated components. Much faster than hot-reload"
@@ -42,7 +41,7 @@
   (cider-interactive-eval render-function-ns
                           nil
                           nil
-                          (cider--nrepl-pr-request-map)))
+                          (cider--nrepl-pr-request-plist)))
 
 (defun clojure-tools-eval-and-force-render! ()
   "Evaluates function under point and renders it to screen"
@@ -63,7 +62,7 @@
                                 (require '[snitch.core :refer [defn* *fn *let]])))"
                           nil
                           nil
-                          (cider--nrepl-pr-request-map)))
+                          (cider--nrepl-pr-request-plist)))
 
 "Makes snitch available for current cljs ns"
 (fset 'clojure-tools-snitch-cljs
